@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <style>
+        main {
+            border: 8px solid #e2e2e2;
+        }
+
+        nav {
+            border: 8px solid #666666;
+        }
+
+        /* Containers */
+        .container,
+        .container-fluid {
+            border: 8px solid #666666;
+        }
+
+        /* Rows */
+        .row {
+            border: 8px solid #00ad79;
+        }
+        .row-label {
+            color: #00ad79;
+        }
+
+        /* Columns  */
+        .row div[class*="col-"] {
+            border: 8px solid #a02222;
+        }
+        .column-label {
+            color: #a02222;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="p-2">
+
+        <h2>.navbar</h2>
+        <nav class="navbar p-2">
+            <h1 class="text-center">Welcome to My Bootstrap Page</h1>
+            <p class="lead text-center text-lg">This is a simple example of a Bootstrap layout.</p>
+        </nav>
+
+        <h2>.container-fluid &gt; <span class="row-label">.row</span> &gt; <span class="column-label">.col-*</span></h2>
+        <!-- Simple responsive columns -->
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <h2>col-sm-4</h2>
+                    <p>&lt;div class="col-sm-4"&gt;</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>col-sm-4</h2>
+                    <p>&lt;div class="col-sm-4"&gt;</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>col-sm-4</h2>
+                    <p>&lt;div class="col-sm-4"&gt;</p>
+                </div>
+            </div>
+        </div>
+
+
+        <h2>.container &gt; <span class="row-label">.row</span> &gt; <span class="column-label">.col-*</span></h2>
+        <!-- Simple responsive columns -->
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <h2>col-sm-6 col-md-4 col-lg-3</h2>
+                    <p>&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;</p>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <h2>col-sm-6 col-md-4 col-lg-3</h2>
+                    <p>&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;</p>
+                </div>
+                <div class="col-sm-12 col-md-4 col-lg-6">
+                    <h2>col-sm-12 col-md-4 col-lg-6</h2>
+                    <p>&lt;div class="col-sm-12 col-md-4 col-lg-6"&gt;</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
