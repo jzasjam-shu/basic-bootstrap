@@ -1,0 +1,45 @@
+/* Main Content */
+main {
+    border: 8px solid #e2e2e2;
+}
+
+/* Navigation */
+.navbar {
+    border: 8px solid #666666;
+}
+
+/* Containers */
+.container,
+.container-fluid {
+    border: 8px solid #666666;
+}
+
+/* Rows */
+.row {
+    border: 8px solid #00ad79;
+}
+.row-label {
+    color: #00ad79;
+}
+
+/* Columns  */
+.row div[class*="col-"] {
+    border: 8px solid #a02222;
+}
+.column-label {
+    color: #a02222;
+}
+
+/* Code Blocks */
+pre {
+    text-align: left;
+    width: fit-content;
+    display: inline-block;
+    margin: auto;
+    border-radius: 0.5em;
+    background-color: #333333;
+    color: #fff;
+    font-family: monospace;
+    padding: 12px;
+    margin-top: 20px;
+}
