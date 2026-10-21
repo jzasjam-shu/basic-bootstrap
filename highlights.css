@@ -7,16 +7,24 @@ main {
 .navbar {
     border: 8px solid #666666;
 }
+.navbar-label {
+    color: #666666;
+}
 
 /* Containers */
 .container,
 .container-fluid {
     border: 8px solid #666666;
 }
+.container-label {
+    color: #666666;
+    transition: border 0.3s ease-in-out;
+}
 
 /* Rows */
 .row {
     border: 8px solid #00ad79;
+    transition: border 0.3s ease-in-out;
 }
 .row-label {
     color: #00ad79;
@@ -25,9 +33,20 @@ main {
 /* Columns  */
 .row div[class*="col-"] {
     border: 8px solid #a02222;
+    transition: border 0.3s ease-in-out;
 }
 .column-label {
     color: #a02222;
+}
+
+/* No Highlighting */
+.no-highlight.navbar,
+.no-highlight.container,
+.no-highlight.container-fluid,
+.no-highlight .row,
+.no-highlight .row div[class*="col-"] {
+    border-width: 0px;
+    transition: border 0.3s ease-in-out;
 }
 
 /* Code Blocks */
@@ -41,4 +60,11 @@ pre {
     color: #fff;
     font-family: monospace;
     margin-top: 20px;
+    box-shadow: none;
+    cursor: copy; 
+}
+
+pre:hover {
+    box-shadow: 0 2px 10px #000010bd;
+    transition: box-shadow 0.3s ease-in-out;
 }

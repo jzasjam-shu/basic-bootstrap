@@ -5,97 +5,263 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Bootstrap Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="highlights.css">
     <!-- Code Syntax Highlighting  -->
     <!-- VS Dark theme css -->
     <link rel="stylesheet" href="vs-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+
+    
+            
+    
     <main class="p-2 text-center">
 
+        <h1 class="text-center">Basic Bootstrap Page</h1>
+        <p class="lead text-center">This page demonstrates basic Bootstrap components and layout.</p>
+
+        <hr class="my-5">
+        
+        
+        <!-- Bootstrap CSS Integration -->
         <h2>Bootstrap CSS Integration</h2>
-        <pre><code class="language-html">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" &gt;</code></pre>
+        <pre><code title="Click to copy" class="language-html">&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
 
-        <hr class="my-4">
+        <hr class="my-5">
 
-        <h2>div.navbar</h2>
-        <div class="navbar p-2">
+
+        <!-- Bootstrap JS Integration -->
+        <h2>Bootstrap JS Integration</h2>
+        <pre><code title="Click to copy"  class="language-html">&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+
+
+        <!-- Navbar Section -->
+        <h2><span class="navbar-label">div.navbar</span></h2>
+        <div class="navbar bg-body-tertiary p-2 ">
             <h1>Welcome to My Bootstrap Page</h1>
             <p class="lead">This is a simple example of a Bootstrap layout.</p>
         </div>
 
-        <pre><code class="language-html">&lt;div class="navbar"&gt;
+        <pre><code title="Click to copy" class="language-html">&lt;div class="navbar bg-body-tertiary"&gt;
     &lt;h1&gt;Welcome to My Bootstrap Page&lt;/h1&gt;
     &lt;p class="lead"&gt;This is a simple example of a Bootstrap layout.&lt;/p&gt;
 &lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
 
-        <hr class="my-4">
+        <hr class="my-5">
 
-        <h2>div.container-fluid &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
-        <!-- Simple responsive columns -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4">
-                    <h2>col-sm-4</h2>
-                    <p>&lt;div class="col-sm-4"&gt;...&lt;/div&gt;</p>
-                </div>
-                <div class="col-sm-4">
-                    <h2>col-sm-4</h2>
-                    <p>&lt;div class="col-sm-4"&gt;...&lt;/div&gt;</p>
-                </div>
-                <div class="col-sm-4">
-                    <h2>col-sm-4</h2>
-                    <p>&lt;div class="col-sm-4"&gt;...&lt;/div&gt;</p>
+
+        <!-- Navbar with Javascript Functionality -->
+        <h2><span class="navbar-label">div.navbar</span> with Javascript Functionality</h2>
+        <div class="navbar navbar-expand-lg bg-body-tertiary mb-3" >
+            <div class="container-fluid no-highlight">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
                 </div>
             </div>
         </div>
+        <a href="https://getbootstrap.com/docs/5.3/components/navbar/#supported-content"  target="_blank">Bootstrap Navbar Documentation</a>
 
-        <pre><code class="language-html">&lt;div class="container-fluid"&gt;
+        <hr class="my-5">
+
+
+        <!-- Responsive Columns -->
+        <h2><span class="container-label">div.container</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
+        <!-- Simple responsive columns -->
+        <div class="container" onclick="toggleHighlights(this);">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h2 contenteditable="true">.col-sm-4</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-4"&gt; ... &lt;/div&gt;</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 contenteditable="true">.col-sm-4</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-4"&gt; ... &lt;/div&gt;</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2 contenteditable="true">.col-sm-4</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-4"&gt; ... &lt;/div&gt;</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-muted small- mt-2">Click the container to toggle highlighting.</p>
+
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container"&gt;
     &lt;div class="row"&gt;
-        &lt;div class="col-sm-4"&gt;...&lt;/div&gt;
-        &lt;div class="col-sm-4"&gt;...&lt;/div&gt;
-        &lt;div class="col-sm-4"&gt;...&lt;/div&gt;
+        &lt;div class="col-sm-4"&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-sm-4"&gt; ... &lt;/div&gt;
+        &lt;div class="col-sm-4"&gt; ... &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
 
-        <hr class="my-4">
+        <hr class="my-5">
 
-        <h2>div.container &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
+
+        <!-- Responsive Columns-->
+        <h2><span class="container-label">div.container-fluid</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
         <!-- Simple responsive columns -->
-        <div class="container">
+        <div class="container-fluid" onclick="toggleHighlights(this);">
             <div class="row">
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <h2>col-sm-6 col-md-4 col-lg-3</h2>
-                    <p>&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;...&lt;/div&gt;</p>
+                    <h2 contenteditable="true">.col-sm-6 .col-md-4 .col-lg-3</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt; ... &lt;/div&gt;</p>
                 </div>
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <h2>col-sm-6 col-md-4 col-lg-3</h2>
-                    <p>&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;...&lt;/div&gt;</p>
+                    <h2 contenteditable="true">.col-sm-6 .col-md-4 .col-lg-3</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-6 col-md-4 col-lg-3"&gt; ... &lt;/div&gt;</p>
                 </div>
                 <div class="col-sm-12 col-md-4 col-lg-6">
-                    <h2>col-sm-12 col-md-4 col-lg-6</h2>
-                    <p>&lt;div class="col-sm-12 col-md-4 col-lg-6"&gt;...&lt;/div&gt;</p>
+                    <h2 contenteditable="true">.col-sm-12 .col-md-4 .col-lg-6</h2>
+                    <p contenteditable="true">&lt;div class="col-sm-12 col-md-4 col-lg-6"&gt; ... &lt;/div&gt;</p>
                 </div>
             </div>
         </div>
+        <p class="text-muted small- mt-2">Click the container to toggle highlighting.</p>
 
-        <pre><code class="language-html">&lt;div class="container"&gt;
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container-fluid"&gt;
     &lt;div class="row"&gt;
-        &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;...&lt;/div&gt;
-        &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;...&lt;/div&gt;
-        &lt;div class="col-sm-12 col-md-4 col-lg-6"&gt;...&lt;/div&gt;
+        &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt; ... &lt;/div&gt;
+        &lt;div class="col-sm-12 col-md-4 col-lg-6"&gt; ... &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
         
-        <hr class="my-4">
+        <hr class="my-5">
 
+
+        <!-- Card Components -->
+        <h2><span class="container-label">div.container</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span> &gt; div.card</h2>
+        <!-- Simple responsive columns -->
+        <div class="container no-highlight" onmouseenter="toggleHighlights(this);" onmouseleave="toggleHighlights(this);">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="card-link">Card link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="text-muted small- mt-2">Hover the container to toggle highlighting.</p>
+
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-md-4"&gt;
+
+            &lt;!-- Card Component --&gt;
+            &lt;div class="card"&gt;
+                &lt;div class="card-body"&gt;
+                    &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+                    &lt;h6 class="card-subtitle mb-2 text-body-secondary"&gt;Card subtitle&lt;/h6&gt;
+                    &lt;p class="card-text"&gt;Card content.&lt;/p&gt;
+                    &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+        &lt;div class="col-md-4"&gt; ... &lt;/div&gt;
+        &lt;div class="col-md-4"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+
+
+        <!-- Alert Components -->
+        <h2>div.alert</h2>
+        <div class="alert alert-success" role="alert">
+            A simple success alert - check it out!
+        </div>
+        <div class="alert alert-danger d-sm-table mx-auto" role="alert">
+            A simple danger alert - check it out!
+        </div>
+        
+        <pre><code title="Click to copy" class="language-html">&lt;div class="alert alert-success" role="alert"&gt;
+    A simple success alert - check it out!
+&lt;/div&gt;
+&lt;div class="alert alert-danger d-sm-table mx-auto" role="alert"&gt;
+    A simple danger alert - check it out!
+&lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+
+
+        <!-- Full Page Example -->
         <h2>Full Page Example</h2>
-        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+        <pre><code title="Click to copy" class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -105,13 +271,15 @@
 &lt;/head&gt;
 &lt;body&gt;
 
+    &lt;!-- Navbar Section --&gt;
+    &lt;nav class="navbar p-3 bg-body-tertiary"&gt;
+        &lt;h1&gt;Welcome to My Bootstrap Page&lt;/h1&gt;
+        &lt;p class="lead"&gt;This is a simple example of a Bootstrap layout.&lt;/p&gt;
+    &lt;/nav&gt;
+
     &lt;main class="text-center p-3"&gt;
 
-        &lt;div class="navbar pb-3"&gt;
-            &lt;h1&gt;Welcome to My Bootstrap Page&lt;/h1&gt;
-            &lt;p class="lead"&gt;This is a simple example of a Bootstrap layout.&lt;/p&gt;
-        &lt;/div&gt;
-
+        &lt;!-- Row and Columns --&gt;
         &lt;div class="container-fluid pb-3"&gt;
             &lt;div class="row"&gt;
                 &lt;div class="col-sm-4"&gt;Column 1&lt;/div&gt;
@@ -120,11 +288,33 @@
             &lt;/div&gt;
         &lt;/div&gt;
 
+        &lt;!-- Row and Columns --&gt;
         &lt;div class="container pb-3"&gt;
             &lt;div class="row"&gt;
-                &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;Column 1&lt;/div&gt;
-                &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;Column 2&lt;/div&gt;
-                &lt;div class="col-sm-12 col-md-4 col-lg-6"&gt;Column 3&lt;/div&gt;
+                &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="card"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Card content&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-6 col-md-4 col-lg-3"&gt;
+                    &lt;div class="card"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Card content&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-12 col-md-4 col-lg-6"&gt;
+                    &lt;div class="card"&gt;
+                        &lt;div class="card-body"&gt;
+                            &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+                            &lt;p class="card-text"&gt;Card content&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -132,8 +322,48 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
 
     </main>
+
+    <!-- Bootstrap Toast Message (Auto Hide) -->
+    <div class="position-fixed top-0 end-0 p-3" style="z-index: 11">
+        <div id="copyToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Code copied to clipboard!
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        function toggleHighlights(container) {
+            container.classList.toggle('no-highlight');
+        }
+
+        // On click, copy content of the code block to clipboard
+        document.querySelectorAll('pre code').forEach((codeBlock) => {
+            codeBlock.addEventListener('click', () => {
+                const text = codeBlock.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    // alert('Code copied to clipboard!');
+                    // Show Bootstrap toast message
+                    const toastElement = document.getElementById('copyToast');
+                    const toast = new bootstrap.Toast(toastElement);
+                    toast.show();
+                    
+                }).catch(err => {
+                    console.error('Failed to copy: ', err);
+                });
+            });
+        });
+
+
+    </script>
 </body>
 
 </html>
