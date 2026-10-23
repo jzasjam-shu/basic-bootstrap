@@ -492,36 +492,54 @@ insertHtmlItems.forEach(item => {
                 htmlCode = `
 <!-- Accordion component -->
 <div class="accordion" id="accordionExample">
+
+    <!-- Accordion Item -->
     <div class="accordion-item">
+
+        <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Accordion Item #1
         </button>
         </h2>
+
+        <!-- Accordion Item Collapsible Content -->
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
         </div>
     </div>
+
+    <!-- Accordion Item -->
     <div class="accordion-item">
+
+        <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Accordion Item #2
         </button>
         </h2>
+
+        <!-- Accordion Item Collapsible Content -->
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
             </div>
         </div>
     </div>
+
+    <!-- Accordion Item -->
     <div class="accordion-item">
+
+        <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             Accordion Item #3
         </button>
         </h2>
+
+        <!-- Accordion Item Collapsible Content -->
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
@@ -571,27 +589,40 @@ insertHtmlItems.forEach(item => {
                 htmlCode = `
 <!-- List with Counts component -->
 <ul class="list-group text-start">
+
+    <!-- List Item -->
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
+
+        <!-- List Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
+
+    <!-- List Item -->
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
+
+        <!-- List Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
+
+    <!-- List Item -->
     <li class="list-group-item d-flex justify-content-between align-items-start">
         <div class="ms-2 me-auto">
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
+
+        <!-- List Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
+
 </ul>
 `;
                 break;
@@ -614,19 +645,27 @@ insertHtmlItems.forEach(item => {
                 htmlCode = `
 <!-- Form component -->
 <form class="text-start">
+
+    <!-- Email Input -->
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
+
+    <!-- Password Input -->
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
     </div>
+
+    <!-- Checkbox Input -->
     <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1">
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
+
+    <!-- Submit Button -->
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>`;
                 break;
@@ -638,22 +677,30 @@ insertHtmlItems.forEach(item => {
 <hr>
 <form class="text-start">
     <div class="row g-3">
+
+        <!-- First Name Input -->
         <div class="col-md-6">
             <div class="form-floating">
                 <input type="text" class="form-control" id="fullFormFirstName" placeholder="First name">
                 <label for="fullFormFirstName">First name</label>
             </div>
         </div>
+
+        <!-- Last Name Input -->
         <div class="col-md-6">
             <div class="form-floating">
                 <input type="text" class="form-control" id="fullFormLastName" placeholder="Last name">
                 <label for="fullFormLastName">Last name</label>
             </div>
         </div>
+
+        <!-- Email Input -->
         <div class="col-12">
             <label for="fullFormEmail" class="form-label">Email address</label>
             <input type="email" class="form-control" id="fullFormEmail" placeholder="name@example.com">
         </div>
+
+        <!-- Subject Dropdown -->
         <div class="col-12">
             <label for="fullFormSubject" class="form-label">Subject</label>
             <select id="fullFormSubject" class="form-select">
@@ -663,19 +710,26 @@ insertHtmlItems.forEach(item => {
                 <option>Feedback</option>
             </select>
         </div>
+
+        <!-- Message Text Area Input -->
         <div class="col-12">
             <label for="fullFormMessage" class="form-label">Message</label>
             <textarea class="form-control" id="fullFormMessage" rows="4" placeholder="Enter your message"></textarea>
         </div>
+
+        <!-- Checkbox Input -->
         <div class="col-12">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="fullFormUpdates">
                 <label class="form-check-label" for="fullFormUpdates">Send me occasional updates</label>
             </div>
         </div>
+
+        <!-- Submit Button -->
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
+        
     </div>
 </form>`;
                 break;
@@ -796,23 +850,27 @@ insertAtCursor('\n\n<!-- Main Content -->\n<main class="p-2 text-center">\n\n');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
 
+        insertAtCursor('\n\n\t\t</div>\n');
+
+        insertAtCursor('\n\n\t\t<!-- Row -->\n');
+        insertAtCursor('\t\t<div class="row g-3 mb-3">\n');
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-sm-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">\n');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
 
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-sm-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">\n');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
             
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-sm-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">\n');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
