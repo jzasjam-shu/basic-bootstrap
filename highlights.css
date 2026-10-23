@@ -86,7 +86,7 @@ pre:hover {
     margin: 0 !important;
     text-align: left;
     display: inline-block; 
-    background-color: #333333;
+    background-color: #202020;
     color: #fff;
     font-family: monospace;
     margin-top: 20px;
@@ -139,7 +139,7 @@ html[data-bs-theme=dark] #code {
 
 .htmlOutputTab {
     cursor: pointer;
-    display: inline-block;
+    display: block;
     width: fit-content;
     border: 3px solid #838383;
     padding: 0.2em 0.8em;

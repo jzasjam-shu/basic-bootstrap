@@ -26,7 +26,7 @@ function outputToIframe() {
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></scr` + `ipt>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 ` + document.getElementById('htmlInput').value + `
 </body>
 </html>`;
@@ -126,89 +126,121 @@ insertHtmlItems.forEach(item => {
                 htmlCode = `
 <!-- Header -->
 <header class="p-2 text-center">
-<h1 class="display-4">Header Title</h1>
-<p class="lead">This is a simple header description.</p>
+    <h1 class="display-4">Header Title</h1>
+    <p class="lead">This is a simple header description - <a href="https://getbootstrap.com/docs/5.3/content/typography/" target="_blank">See Bootstrap Typography Docs.</a></p>
 </header>
 `;
                 break;
             case 'footer':
                 htmlCode = `
 <!-- Footer -->
-<footer class="text-center p-3 bg-body-tertiary text-muted small">Created by {Your Name Here} 2026</footer>
+<footer class="mt-auto text-center p-3 bg-body-tertiary text-muted small">Created by {Your Name Here} 2026</footer>
 `;
                 break;
             case 'text':
                 htmlCode = `
 <!-- Text Content -->
 <h3>Heading</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa velit, tempor non consequat in, commodo laoreet ligula. Duis eget vulputate ligula. Ut quis arcu dui. Quisque feugiat nisi et finibus molestie. Ut auctor, leo vel dapibus porta, dui diam tempor mi, ultrices sollicitudin lacus purus vitae felis. Nulla ipsum libero, placerat vitae metus mattis, ullamcorper semper elit. Nunc sagittis et nisi vel scelerisque. Pellentesque vel varius orci. Donec faucibus sit amet neque a consequat.</p>`;
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent massa velit, tempor non consequat in, commodo laoreet ligula. Duis eget vulputate ligula. Ut quis arcu dui. Quisque feugiat nisi et finibus molestie. Ut auctor, leo vel dapibus porta, dui diam tempor mi, ultrices sollicitudin lacus purus vitae felis. Nulla ipsum libero, placerat vitae metus mattis, ullamcorper semper elit. Nunc sagittis et nisi vel scelerisque. Pellentesque vel varius orci. Donec faucibus sit amet neque a consequat.</p>
+`;
+                break;
+            case 'button':
+                htmlCode = `
+<a href="#" class="btn btn-primary">Primary</a>`;
+                break;
+            case 'button-danger':
+                htmlCode = `
+<a href="#" class="btn btn-danger">Danger</a>`;
+                break;
+            case 'button-outline':
+                htmlCode = `
+<a href="#" class="btn btn-outline-success">Success</a>`;
+                break;
+            case 'button-large':
+                htmlCode = `
+<a href="#" class="btn btn-secondary btn-lg">Large button</a>`;
+                break;
+            case 'button-small':
+                htmlCode = `
+<a href="#" class="btn btn-secondary btn-sm">Small button</a>`;
+                break;
+            case 'button-full':
+                htmlCode = `
+<a href="#" class="btn btn-primary w-100">Primary</a>`;
                 break;
             case 'navbar':
                 htmlCode = `
 <!-- Navbar Component -->
 <nav class="navbar navbar-light bg-body-secondary">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-</div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </div>
 </nav>
 `;
                 break;
             case 'navbar-dark':
                 htmlCode = `
-<!-- Navbar Component -->
+<!-- Navbar (Dark) Component -->
 <nav class="navbar bg-dark" data-bs-theme="dark">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-</div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </div>
 </nav>
 `;
                 break;
             case 'navbar-icon':
                 htmlCode = `
-<!-- Navbar Component -->
+<!-- Navbar with Logo Component -->
 <nav class="navbar bg-body-secondary">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">
-<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-Bootstrap
-</a>
-</div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+            Bootstrap
+        </a>
+    </div>
 </nav>
 `;
                 break;
             case 'navbar-menu':
                 htmlCode = `
-<!-- Navbar Component -->
+<!-- Navbar with Menu Component -->
 <nav class="navbar navbar-expand-lg bg-body-secondary">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
-<ul class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-    </li>
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown link
-    </a>
-    <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-    </li>
-</ul>
-</div>
-</div>
+    <div class="container-fluid">
+
+        <!-- Branding -->
+        <a class="navbar-brand" href="#">Navbar</a>
+       
+        <!-- Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </nav>
 `;
                 break;
@@ -216,40 +248,50 @@ Bootstrap
                 htmlCode = `
 <!-- Navbar Component -->
 <nav class="navbar navbar-expand-lg bg-body-secondary">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">Navbar</a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <div class="container-fluid">
+
+        <!-- Branding -->
+        <a class="navbar-brand" href="#">Navbar</a>
+
+        <!-- Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
             </ul>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-</div>
-</div>
+
+            <!-- Search Box -->
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+
+        </div>
+
+    </div>
 </nav>
 `;
                 break;
@@ -257,11 +299,14 @@ Bootstrap
                 htmlCode = `
 <!-- Grid container -->
 <div class="container-fluid">
-<!-- Row -->
-<div class="row g-3 mb-3">
-<!-- Column -->
-<div class="col-sm-12">Column 1</div>
-</div>
+    
+    <!-- Row -->
+    <div class="row g-3 mb-3">
+        
+        <!-- Column -->
+        <div class="col-sm-12">Column 1</div>
+
+    </div>
 </div>
 `;
                 break;
@@ -269,13 +314,17 @@ Bootstrap
                 htmlCode = `
 <!-- Grid container -->
 <div class="container-fluid">
-<!-- Row -->
-<div class="row g-3 mb-3">
-<!-- Column -->
-<div class="col-sm-6">Column 1</div>
-<!-- Column -->
-<div class="col-sm-6">Column 2</div>
-</div>
+
+    <!-- Row -->
+    <div class="row g-3 mb-3">
+
+        <!-- Column -->
+        <div class="col-sm-6">Column 1</div>
+
+        <!-- Column -->
+        <div class="col-sm-6">Column 2</div>
+
+    </div>
 </div>
 `;
                 break;
@@ -283,15 +332,20 @@ Bootstrap
                 htmlCode = `
 <!-- Grid container -->
 <div class="container-fluid">
-<!-- Row -->
-<div class="row g-3 mb-3">
-<!-- Column -->
-<div class="col-sm-4">Column 1</div>
-<!-- Column -->
-<div class="col-sm-4">Column 2</div>
-<!-- Column -->
-<div class="col-sm-4">Column 3</div>
-</div>
+
+    <!-- Row -->
+    <div class="row g-3 mb-3">
+
+        <!-- Column -->
+        <div class="col-sm-4">Column 1</div>
+
+        <!-- Column -->
+        <div class="col-sm-4">Column 2</div>
+
+        <!-- Column -->
+        <div class="col-sm-4">Column 3</div>
+
+    </div>
 </div>
 `;
                 break;
@@ -299,17 +353,23 @@ Bootstrap
                 htmlCode = `
 <!-- Grid container -->
 <div class="container-fluid">
-<!-- Row -->
-<div class="row g-3 mb-3">
-<!-- Column -->
-<div class="col-sm-6 col-md-3">Column 1</div>
-<!-- Column -->
-<div class="col-sm-6 col-md-3">Column 2</div>
-<!-- Column -->
-<div class="col-sm-6 col-md-3">Column 3</div>
-<!-- Column -->
-<div class="col-sm-6 col-md-3">Column 4</div>
-</div>
+
+    <!-- Row -->
+    <div class="row g-3 mb-3">
+        
+        <!-- Column -->
+        <div class="col-sm-6 col-md-3">Column 1</div>
+        
+        <!-- Column -->
+        <div class="col-sm-6 col-md-3">Column 2</div>
+        
+        <!-- Column -->
+        <div class="col-sm-6 col-md-3">Column 3</div>
+        
+        <!-- Column -->
+        <div class="col-sm-6 col-md-3">Column 4</div>
+    
+    </div>
 </div>
 `;
                 break;
@@ -317,22 +377,22 @@ Bootstrap
                 htmlCode = `
 <!-- Card component -->
 <div class="card h-100">
-<div class="card-body">
-<h5 class="card-title">Card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
 </div>`;
                 break;
             case 'card-dark':
                 htmlCode = `
 <!-- Dark Card component -->
 <div class="card h-100 text-bg-dark">
-<div class="card-body">
-<h5 class="card-title">Dark card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
+    <div class="card-body">
+        <h5 class="card-title">Dark card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
 </div>
 `;
                 break;
@@ -340,28 +400,28 @@ Bootstrap
                 htmlCode = `
 <!-- Text Card component -->
 <div class="card h-100">
-<div class="card-body">
-<h5 class="card-title">Card title</h5>
-<h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<a href="#" class="card-link">Card link</a>
-<a href="#" class="card-link">Another link</a>
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
 </div>
-</div>#
 `;
                 break;
             case 'card-header':
                 htmlCode = `
 <!-- Card with Header component -->
 <div class="card h-100">
-<div class="card-header">
-Featured
-</div>
-<div class="card-body">
-<h5 class="card-title">Special title treatment</h5>
-<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-<a href="#" class="btn btn-primary">Go somewhere</a>
-</div>
+    <div class="card-header">
+        Featured
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Special title treatment</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
 </div>
 `;
                 break;
@@ -369,10 +429,10 @@ Featured
                 htmlCode = `
 <!-- Card with Image component -->
 <div class="card h-100">
-<img src="https://placeholdit.com/600x200" class="card-img-top" alt="...">
-<div class="card-body">
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
+    <img src="https://placeholdit.com/600x200" class="card-img-top" alt="...">
+    <div class="card-body">
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
 </div>
 `;
                 break;
@@ -380,14 +440,14 @@ Featured
                 htmlCode = `
 <!-- Card with List component -->
 <div class="card h-100">
-<div class="card-header">
-Featured
-</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-</ul>
+    <div class="card-header">
+        Featured
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+    </ul>
 </div>
 `;
                 break;
@@ -395,20 +455,20 @@ Featured
                 htmlCode = `
 <!-- Full Card component -->
 <div class="card h-100">
-<img src="https://placeholdit.com/600x200" class="card-img-top" alt="...">
-<div class="card-body">
-<h5 class="card-title">Card title</h5>
-<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-<ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-</ul>
-<div class="card-body">
-<a href="#" class="card-link">Card link</a>
-<a href="#" class="card-link">Another link</a>
-</div>
+    <img src="https://placeholdit.com/600x200" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
 </div>
 `;
                 break;
@@ -416,7 +476,7 @@ Featured
                 htmlCode = `
 <!-- Alert component -->
 <div class="alert alert-primary" role="alert">
-This is a primary alert - check it out!
+    This is a primary alert - check it out!
 </div>
 `;
                 break;
@@ -424,7 +484,7 @@ This is a primary alert - check it out!
                 htmlCode = `
 <!-- Alert component -->
 <div class="alert alert-danger" role="alert">
-This is a danger alert - check it out!
+    This is a danger alert - check it out!
 </div>
 `;
                 break;
@@ -432,42 +492,42 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- Accordion component -->
 <div class="accordion" id="accordionExample">
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-    Accordion Item #1
-</button>
-</h2>
-<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-    <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Accordion Item #1
+        </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-    Accordion Item #2
-</button>
-</h2>
-<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-    <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Accordion Item #2
+        </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
     </div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-    Accordion Item #3
-</button>
-</h2>
-<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-    <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Accordion Item #3
+        </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+        </div>
     </div>
-</div>
-</div>
 </div>
 `;
                 break;
@@ -475,11 +535,11 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- List Group component -->
 <ul class="list-group">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-<li class="list-group-item">A fourth item</li>
-<li class="list-group-item">And a fifth one</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
 </ul>
 `;
                 break;
@@ -487,11 +547,11 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- List Group flush component -->
 <ul class="list-group list-group-flush">
-<li class="list-group-item">An item</li>
-<li class="list-group-item">A second item</li>
-<li class="list-group-item">A third item</li>
-<li class="list-group-item">A fourth item</li>
-<li class="list-group-item">And a fifth one</li>
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
 </ul>
 `;
                 break;
@@ -499,11 +559,11 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- List Links Group component -->
 <div class="list-group">
-<a href="#" class="list-group-item list-group-item-action">The first link item</a>
-<a href="#" class="list-group-item list-group-item-action">A second link item</a>
-<a href="#" class="list-group-item list-group-item-action">A third link item</a>
-<a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
-<a href="#" class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
+    <a href="#" class="list-group-item list-group-item-action">The first link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A third link item</a>
+    <a href="#" class="list-group-item list-group-item-action">A fourth link item</a>
+    <a href="#" class="list-group-item list-group-item-action disabled" aria-disabled="true">A disabled link item</a>
 </div>
 `;
                 break;
@@ -511,27 +571,27 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- List with Counts component -->
 <ul class="list-group text-start">
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-    <div class="fw-bold">Subheading</div>
-    Content for list item
-</div>
-<span class="badge text-bg-primary rounded-pill">14</span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-    <div class="fw-bold">Subheading</div>
-    Content for list item
-</div>
-<span class="badge text-bg-primary rounded-pill">14</span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-    <div class="fw-bold">Subheading</div>
-    Content for list item
-</div>
-<span class="badge text-bg-primary rounded-pill">14</span>
-</li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Subheading</div>
+            Content for list item
+        </div>
+        <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Subheading</div>
+            Content for list item
+        </div>
+        <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+            <div class="fw-bold">Subheading</div>
+            Content for list item
+        </div>
+        <span class="badge text-bg-primary rounded-pill">14</span>
+    </li>
 </ul>
 `;
                 break;
@@ -539,35 +599,35 @@ This is a danger alert - check it out!
                 htmlCode = `
 <!-- List Group with Colours component -->
 <ul class="list-group">
-<li class="list-group-item">A simple default list group item</li> 
-<li class="list-group-item list-group-item-primary">A simple primary list group item</li>
-<li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-<li class="list-group-item list-group-item-success">A simple success list group item</li>
-<li class="list-group-item list-group-item-danger">A simple danger list group item</li>
-<li class="list-group-item list-group-item-warning">A simple warning list group item</li>
-<li class="list-group-item list-group-item-info">A simple info list group item</li>
-<li class="list-group-item list-group-item-light">A simple light list group item</li>
-<li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+    <li class="list-group-item">A simple default list group item</li> 
+    <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+    <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+    <li class="list-group-item list-group-item-success">A simple success list group item</li>
+    <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+    <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+    <li class="list-group-item list-group-item-info">A simple info list group item</li>
+    <li class="list-group-item list-group-item-light">A simple light list group item</li>
+    <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
 </ul>`;
                 break;
             case 'form':
                 htmlCode = `
 <!-- Form component -->
 <form class="text-start">
-<div class="mb-3">
-<label for="exampleInputEmail1" class="form-label">Email address</label>
-<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-</div>
-<div class="mb-3">
-<label for="exampleInputPassword1" class="form-label">Password</label>
-<input type="password" class="form-control" id="exampleInputPassword1">
-</div>
-<div class="mb-3 form-check">
-<input type="checkbox" class="form-check-input" id="exampleCheck1">
-<label class="form-check-label" for="exampleCheck1">Check me out</label>
-</div>
-<button type="submit" class="btn btn-primary">Submit</button>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>`;
                 break;
 
@@ -577,46 +637,46 @@ This is a danger alert - check it out!
 <h4>Sign Up</h4>
 <hr>
 <form class="text-start">
-<div class="row g-3">
-<div class="col-md-6">
-    <div class="form-floating">
-        <input type="text" class="form-control" id="fullFormFirstName" placeholder="First name">
-        <label for="fullFormFirstName">First name</label>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="fullFormFirstName" placeholder="First name">
+                <label for="fullFormFirstName">First name</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating">
+                <input type="text" class="form-control" id="fullFormLastName" placeholder="Last name">
+                <label for="fullFormLastName">Last name</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <label for="fullFormEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="fullFormEmail" placeholder="name@example.com">
+        </div>
+        <div class="col-12">
+            <label for="fullFormSubject" class="form-label">Subject</label>
+            <select id="fullFormSubject" class="form-select">
+                <option selected disabled value="">Choose a subject...</option>
+                <option>General enquiry</option>
+                <option>Support</option>
+                <option>Feedback</option>
+            </select>
+        </div>
+        <div class="col-12">
+            <label for="fullFormMessage" class="form-label">Message</label>
+            <textarea class="form-control" id="fullFormMessage" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="fullFormUpdates">
+                <label class="form-check-label" for="fullFormUpdates">Send me occasional updates</label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
     </div>
-</div>
-<div class="col-md-6">
-    <div class="form-floating">
-        <input type="text" class="form-control" id="fullFormLastName" placeholder="Last name">
-        <label for="fullFormLastName">Last name</label>
-    </div>
-</div>
-<div class="col-12">
-    <label for="fullFormEmail" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="fullFormEmail" placeholder="name@example.com">
-</div>
-<div class="col-12">
-    <label for="fullFormSubject" class="form-label">Subject</label>
-    <select id="fullFormSubject" class="form-select">
-        <option selected disabled value="">Choose a subject...</option>
-        <option>General enquiry</option>
-        <option>Support</option>
-        <option>Feedback</option>
-    </select>
-</div>
-<div class="col-12">
-    <label for="fullFormMessage" class="form-label">Message</label>
-    <textarea class="form-control" id="fullFormMessage" rows="4" placeholder="Enter your message"></textarea>
-</div>
-<div class="col-12">
-    <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="fullFormUpdates">
-        <label class="form-check-label" for="fullFormUpdates">Send me occasional updates</label>
-    </div>
-</div>
-<div class="col-12">
-    <button type="submit" class="btn btn-primary">Submit</button>
-</div>
-</div>
 </form>`;
                 break;
 
