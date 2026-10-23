@@ -109,6 +109,7 @@ pre:hover {
 #htmlOutput, 
 #iframe, 
 #code {
+    box-shadow: 0 2px 6px #66666690;
     border: 2px solid #838383;
     min-height: 250px;
     background: linear-gradient(to top, #fff 80%, #f0f0f0 100%);
@@ -122,6 +123,7 @@ html[data-bs-theme=dark] #iframe,
 html[data-bs-theme=dark] #code {
     background: linear-gradient(to top, #212529 80%, #191a1b 100%);
     border-color: #0a0a0a;
+    box-shadow: 0 2px 6px #08080890;
 }
 
 #code {
@@ -138,6 +140,7 @@ html[data-bs-theme=dark] #code {
 }
 
 .htmlOutputTab {
+    box-shadow: 0 -1px 6px #99999950;
     cursor: pointer;
     display: block;
     width: fit-content;
@@ -159,6 +162,7 @@ html[data-bs-theme=dark] #code {
 html[data-bs-theme=dark] .htmlOutputTab {
     background: linear-gradient(to bottom, #212529 60%, #191a1b 100%);
     border-color: #0a0a0a;
+    box-shadow: 0 -1px 6px #08080890;
 }
 
 .htmlOutputTab.inactive {
