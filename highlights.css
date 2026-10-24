@@ -185,3 +185,7 @@ html[data-bs-theme=dark] .htmlOutputTab.inactive {
 html[data-bs-theme=dark] #iframeWidth {
     border-color: #0a0a0a;
 }
+
+a.list-group-item {
+    cursor: pointer;
+}

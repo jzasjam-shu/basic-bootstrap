@@ -178,6 +178,18 @@ insertHtmlItems.forEach(item => {
 </nav>
 `;
                 break;
+            case 'navbar-fixed':
+                htmlCode = `
+<!-- Navbar Component (Fixed Position) -->
+<nav class="navbar navbar-light fixed-top bg-body-secondary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+    </div>
+</nav>
+<!-- Fixed Navbar Spacer -->
+<div class="mb-5"></div>
+`;
+                break;
             case 'navbar-dark':
                 htmlCode = `
 <!-- Navbar (Dark) Component -->
@@ -242,6 +254,51 @@ insertHtmlItems.forEach(item => {
 
     </div>
 </nav>
+`;
+                break;
+            case 'navbar-menu-fixed':
+                htmlCode = `
+<!-- Navbar with Menu Component (Fixed Position) -->
+<nav class="navbar navbar-expand-lg fixed-top bg-body-secondary">
+    <div class="container-fluid">
+
+        <!-- Branding -->
+        <a class="navbar-brand" href="#">Navbar</a>
+       
+        <!-- Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Menu -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- Fixed Navbar Spacer -->
+<div class="mb-5"></div>
 `;
                 break;
             case 'navbar-full':
@@ -382,7 +439,8 @@ insertHtmlItems.forEach(item => {
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
         <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
-</div>`;
+</div>
+`;
                 break;
             case 'card-dark':
                 htmlCode = `
@@ -641,7 +699,8 @@ insertHtmlItems.forEach(item => {
     <li class="list-group-item list-group-item-info">A simple info list group item</li>
     <li class="list-group-item list-group-item-light">A simple light list group item</li>
     <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
-</ul>`;
+</ul>
+`;
                 break;
             case 'form':
                 htmlCode = `
@@ -669,7 +728,8 @@ insertHtmlItems.forEach(item => {
 
     <!-- Submit Button -->
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>`;
+</form>
+`;
                 break;
 
             case 'form-full':
@@ -680,7 +740,7 @@ insertHtmlItems.forEach(item => {
 <form class="text-start">
     <div class="row g-3">
 
-        <!-- First Name Input -->
+        <!-- First Name Input with Floating Label-->
         <div class="col-md-6">
             <div class="form-floating">
                 <input type="text" class="form-control" id="fullFormFirstName" placeholder="First name">
@@ -688,7 +748,7 @@ insertHtmlItems.forEach(item => {
             </div>
         </div>
 
-        <!-- Last Name Input -->
+        <!-- Last Name Input with Floating Label -->
         <div class="col-md-6">
             <div class="form-floating">
                 <input type="text" class="form-control" id="fullFormLastName" placeholder="Last name">
@@ -733,7 +793,8 @@ insertHtmlItems.forEach(item => {
         </div>
 
     </div>
-</form>`;
+</form>
+`;
                 break;
 
 
