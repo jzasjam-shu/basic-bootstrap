@@ -103,7 +103,78 @@
 
 
         <!-- Responsive Columns -->
+        <h2><span class="container-label">div.container</span></h2>
+        <p>The .container sets a max-width at each <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/" target="_blank">Bootstrap responsive breakpoint</a>.</p>
+        <!-- Simple responsive columns -->
+        <div class="container" onclick="toggleHighlights(this);">
+            <h3>Header</h3>
+            <p>Basic .container</p>
+        </div>
+        <p class="text-muted small- mt-2">Click the container to toggle highlighting.</p>
+
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container"&gt;
+    &lt;h3&gt;Header&lt;/h3&gt;
+    &lt;p&gt;Basic .container&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+
+
+        <!-- Responsive Columns -->
+        <h2><span class="container-label">div.container-fluid</span></h2>
+        <p>The .container-fluid is width: 100% at each <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/" target="_blank">Bootstrap responsive breakpoint</a>.</p>
+        <!-- Simple responsive columns -->
+        <div class="container-fluid" onclick="toggleHighlights(this);">
+            <h3>Header</h3>
+            <p>Basic .container-fluid</p>
+        </div>
+        <p class="text-muted small- mt-2">Click the container to toggle highlighting.</p>
+
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container-fluid"&gt;
+    &lt;h3&gt;Header&lt;/h3&gt;
+    &lt;p&gt;Basic .container-fluid&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+        
+        
+        <!-- Responsive Columns -->
         <h2><span class="container-label">div.container</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
+        <p>Display columns at 6/12 (<strong>.col-6</strong>) or half width regardless of screen size</p>
+        <!-- Simple responsive columns -->
+        <div class="container" onclick="toggleHighlights(this);">
+            <div class="row">
+                <div class="col-6">
+                    <h2>.col-6</h2>
+                    <p>&lt;div class="col-6"&gt; ... &lt;/div&gt;</p>
+                </div>
+                <div class="col-6">
+                    <h2>.col-6</h2>
+                    <p>&lt;div class="col-6"&gt; ... &lt;/div&gt;</p>
+                </div>
+            </div>
+        </div>
+        <p class="text-muted small- mt-2">Click the container to toggle highlighting.</p>
+
+        <pre><code title="Click to copy" class="language-html">&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-6"&gt;
+            &lt;h2&gt;Title&lt;/h2&gt;
+            &lt;p&gt;Content&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="col-6"&gt; ... &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>
+
+        <hr class="my-5">
+
+
+        <!-- Responsive Columns -->
+        <h2><span class="container-label">div.container</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
+        <p>When the size screen is <strong>'small (sm)'</strong> or ≥576px - display columns at 4/12 (<strong>.col-sm-4</strong>) or a third of the width.</p>
         <!-- Simple responsive columns -->
         <div class="container" onclick="toggleHighlights(this);">
             <div class="row">
@@ -140,6 +211,12 @@
 
         <!-- Responsive Columns-->
         <h2><span class="container-label">div.container-fluid</span> &gt; <span class="row-label">div.row</span> &gt; <span class="column-label">div.col-*</span></h2>
+        <ul class="text-start w-md-80 d-block m-auto">
+            <li>When the size screen is <strong>'small (sm)'</strong> or ≥576px - display 2 columns at 6/12 (<strong>.col-sm-6</strong>) or a half of the width, and the other at full width (<strong>.col-sm-12</strong>).</li>
+            <li>At <strong>'medium (md)'</strong> screen size or ≥768px - display all columns at 4/12 (<strong>.col-md-4</strong>) or a third of the width.</li>
+            <li>At <strong>'large (lg)'</strong> screen size or ≥992px - display the first two columns at 3/12 (<strong>.col-lg-3</strong>) or a quarter of the page each, and a column at 6/12 (<strong>.col-lg-6</strong>) or half of the page</li>
+        </ul>
+       <br>
         <!-- Simple responsive columns -->
         <div class="container-fluid" onclick="toggleHighlights(this);">
             <div class="row">
@@ -179,8 +256,8 @@
         <!-- Simple responsive columns -->
         <div class="container no-highlight" onmouseenter="toggleHighlights(this);" onmouseleave="toggleHighlights(this);">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-3">
+                <div class="col-md-3">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
@@ -189,8 +266,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-3">
+                <div class="col-md-6">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
@@ -199,8 +276,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-3">
+                <div class="col-md-3">
+                    <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
@@ -215,10 +292,10 @@
 
         <pre><code title="Click to copy" class="language-html">&lt;div class="container"&gt;
     &lt;div class="row"&gt;
-        &lt;div class="col-md-4"&gt;
+        &lt;div class="col-md-3"&gt;
 
             &lt;!-- Card Component --&gt;
-            &lt;div class="card"&gt;
+            &lt;div class="card h-100"&gt;
                 &lt;div class="card-body"&gt;
                     &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
                     &lt;h6 class="card-subtitle mb-2 text-body-secondary"&gt;Card subtitle&lt;/h6&gt;
@@ -228,8 +305,8 @@
             &lt;/div&gt;
 
         &lt;/div&gt;
-        &lt;div class="col-md-4"&gt; ... &lt;/div&gt;
-        &lt;div class="col-md-4"&gt; ... &lt;/div&gt;
+        &lt;div class="col-md-6"&gt; ... &lt;/div&gt;
+        &lt;div class="col-md-3"&gt; ... &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <p class="text-muted small- mt-2">Click the code to copy to clipboard.</p>

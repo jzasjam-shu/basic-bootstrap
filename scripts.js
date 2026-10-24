@@ -495,14 +495,12 @@ insertHtmlItems.forEach(item => {
 
     <!-- Accordion Item -->
     <div class="accordion-item">
-
         <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
             Accordion Item #1
         </button>
         </h2>
-
         <!-- Accordion Item Collapsible Content -->
         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
@@ -513,14 +511,12 @@ insertHtmlItems.forEach(item => {
 
     <!-- Accordion Item -->
     <div class="accordion-item">
-
         <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             Accordion Item #2
         </button>
         </h2>
-
         <!-- Accordion Item Collapsible Content -->
         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
@@ -531,14 +527,12 @@ insertHtmlItems.forEach(item => {
 
     <!-- Accordion Item -->
     <div class="accordion-item">
-
         <!-- Accordion Item Header -->
         <h2 class="accordion-header">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
             Accordion Item #3
         </button>
         </h2>
-
         <!-- Accordion Item Collapsible Content -->
         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
@@ -546,6 +540,7 @@ insertHtmlItems.forEach(item => {
             </div>
         </div>
     </div>
+    
 </div>
 `;
                 break;
@@ -729,7 +724,7 @@ insertHtmlItems.forEach(item => {
         <div class="col-12">
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-        
+
     </div>
 </form>`;
                 break;
