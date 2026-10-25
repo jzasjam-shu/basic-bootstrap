@@ -7,7 +7,7 @@ const editor = CodeMirror.fromTextArea(htmlInput, {
     indentUnit: 4,
     tabSize: 4,
     indentWithTabs: true,
-    lineWrapping: false,
+    lineWrapping: true,
     autoCloseTags: true,
     matchBrackets: true
 });
