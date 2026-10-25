@@ -1,3 +1,31 @@
+const htmlInput = document.getElementById('htmlInput');
+
+const editor = CodeMirror.fromTextArea(htmlInput, {
+    mode: 'htmlmixed',
+    theme: 'jzj',
+    lineNumbers: true,
+    indentUnit: 4,
+    tabSize: 4,
+    indentWithTabs: true,
+    lineWrapping: false,
+    autoCloseTags: true,
+    matchBrackets: true
+});
+
+// CodeMirror -> textarea -> preview
+editor.on('change', () => {
+    htmlInput.value = editor.getValue();
+    updateOutput();
+});
+
+function setHtmlInput(value) {
+    const newValue = String(value ?? '');
+
+    if (editor.getValue() !== newValue) {
+        editor.setValue(newValue);
+    }
+}
+
 function outputToIframe() {
     const getGeneratedPageURL = ({ html }) => {
         const getBlobURL = (code, type) => {
@@ -65,22 +93,21 @@ function insertHtmlCode(htmlItem) {
     if (insertHtmlItem) {
         insertHtmlItem.click();
     }
-    document.getElementById('htmlInput').value=html_beautify(document.getElementById('htmlInput').value)
+    //setHtmlInput(html_beautify(editor.getValue()));
     console.log(`Inserted HTML: ${htmlItem}`);
 }
 //function to insert HTML code into textarea at cursor position
 function insertAtCursor(htmlCode) {
-    const textarea = document.getElementById('htmlInput');
-    const startPos = textarea.selectionStart;
-    const endPos = textarea.selectionEnd;
-    const beforeValue = textarea.value.substring(0, startPos);
-    const afterValue = textarea.value.substring(endPos, textarea.value.length);
-    textarea.value = beforeValue + htmlCode + afterValue;
-    // Move the cursor to the end of the inserted HTML code
-    const newCursorPos = startPos + htmlCode.length;
-    textarea.setSelectionRange(newCursorPos, newCursorPos);
-    updateOutput(); // Update the output div with the new HTML code
-    document.getElementById('htmlInput').value=html_beautify(document.getElementById('htmlInput').value)
+    editor.focus();
+
+    // Always insert at the end of the current document
+    const lastLine = editor.lastLine();
+    const lastCh = editor.getLine(lastLine).length;
+
+    editor.setCursor({ line: lastLine, ch: lastCh });
+
+    // Insert the new HTML
+    editor.replaceSelection(htmlCode, 'end');
 }
 function insertRandomHtmlNavbarCode() {
     const htmlItems = Array.from(
@@ -122,9 +149,7 @@ function insertRandomHtmlCode() {
 
 
 function clearTextarea() {
-    const textarea = document.getElementById('htmlInput');
-    textarea.value = '';
-    updateOutput(); // Update the output div with the new HTML code
+    setHtmlInput('');
 }
 
 const htmlOutputTabs = document.querySelectorAll('.htmlOutputTab');
@@ -946,17 +971,32 @@ insertHtmlItems.forEach(item => {
             break;
 
         }
-        const htmlInput = document.getElementById('htmlInput');
-        const start = htmlInput.selectionStart;
-        const end = htmlInput.selectionEnd;
-        // Get spaces for currwent line indentation and add to each line of the inserted HTML code (expect the first line  which is already indented)
-        const currentLine = htmlInput.value.substring(0, start).split('\n').pop();
-        const spaces = currentLine.match(/^\s*/)[0];
-        htmlCode = htmlCode.split('\n').map((line, index) => index === 0 ? line : spaces + line).join('\n');
-        htmlInput.value = htmlInput.value.substring(0, start) + htmlCode + htmlInput.value.substring(end);
-        htmlInput.selectionStart = htmlInput.selectionEnd = start + htmlCode.length;
-        document.getElementById('htmlInput').value=html_beautify(document.getElementById('htmlInput').value)
-        updateOutput();
+        // Insert HTML at the current cursor or selection
+        editor.replaceSelection(htmlCode, 'end');
+
+        // Save the cursor position immediately after insertion
+        const cursor = editor.getCursor();
+
+        // Format the document
+        const formatted = html_beautify(editor.getValue(), {
+            indent_size: 4,
+            preserve_newlines: true,
+            max_preserve_newlines: 1,
+            extra_liners: []
+        });
+
+        // Update the editor content
+        setHtmlInput(formatted);
+
+        // Restore cursor to the end of the current line
+        const line = Math.min(cursor.line, editor.lastLine());
+
+        editor.setCursor({
+            line: line,
+            ch: editor.getLine(line).length
+        });
+
+        editor.focus();
     });
 });
 
@@ -973,23 +1013,6 @@ insertHtmlItems.forEach(item => {
 //     });
 // });
 
-document.getElementById('htmlInput').addEventListener('keydown', function (e) {
-    if (e.key == 'Tab') {
-        e.preventDefault();
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
-
-        // set textarea value to: text before caret + tab + text after caret
-        this.value = this.value.substring(0, start) +
-            "\t" + this.value.substring(end);
-
-        // put caret at right position again
-        this.selectionStart =
-            this.selectionEnd = start + 1;
-    }
-});
-
-
 
 // Set up Basic Page
 clearTextarea(); // Clear the textarea on page load
@@ -1002,7 +1025,7 @@ insertAtCursor('\n\t');
     // insertHtmlCode('grid-3'); // Insert the HTML code for the grid-4 into the textarea on page load
     // Row
     insertAtCursor('\n\n\t<!-- Grid Container -->\n');
-    insertAtCursor('\n\t<div class="container-fluid">\n');
+    insertAtCursor('\t<div class="container-fluid">\n');
         
         insertAtCursor('\n\n\t\t<!-- Row -->\n');
         insertAtCursor('\t\t<div class="row g-3 mb-3">\n');
@@ -1052,6 +1075,18 @@ insertAtCursor('\n\t');
 insertAtCursor('</main>'); // Close the main element
 
 insertHtmlCode('footer');
+
+const formatted = html_beautify(editor.getValue(), {
+    indent_size: 4,
+    preserve_newlines: true,
+    max_preserve_newlines: 1,
+    extra_liners: []
+});
+
+setHtmlInput(formatted);
+
+//setHtmlInput(html_beautify(editor.getValue()));
+editor.setCursor(0, 0);
 
 setTimeout('outputToIframe();', 100);
 

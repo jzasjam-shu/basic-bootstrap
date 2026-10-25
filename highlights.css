@@ -207,3 +207,9 @@ a.list-group-item {
 #subAccordionExample .list-group a {
     border-left-width: 5px;
 }
+
+.CodeMirror {
+    min-height: 100% !important;
+    font-size: 12px;
+    text-align: left;
+}
