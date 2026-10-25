@@ -55,7 +55,9 @@ function outputToIframe() {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></scr` + `ipt>
 </head>
 <body class="d-flex flex-column min-vh-100">
+
 ` + document.getElementById('htmlInput').value + `
+
 </body>
 </html>`;
 
