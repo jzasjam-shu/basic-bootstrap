@@ -193,7 +193,8 @@ insertHtmlItems.forEach(item => {
 <!-- Main Content -->
 <main class="p-2 text-center">
 
-</main>`;
+</main>
+`;
                 break;
             case 'header':
                 htmlCode = `
@@ -740,8 +741,7 @@ insertHtmlItems.forEach(item => {
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
-
-        <!-- List Count -->
+        <!-- List Item Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
 
@@ -751,8 +751,7 @@ insertHtmlItems.forEach(item => {
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
-
-        <!-- List Count -->
+        <!-- List Item Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
 
@@ -762,8 +761,7 @@ insertHtmlItems.forEach(item => {
             <div class="fw-bold">Subheading</div>
             Content for list item
         </div>
-
-        <!-- List Count -->
+        <!-- List Item Count -->
         <span class="badge text-bg-primary rounded-pill">14</span>
     </li>
 
@@ -1074,7 +1072,7 @@ insertAtCursor('\n\t');
     insertAtCursor('\n\n\t\t</div>\n\t</div>\n');
 
 
-insertAtCursor('</main>'); // Close the main element
+insertAtCursor('</main>\n'); // Close the main element
 
 insertHtmlCode('footer');
 
