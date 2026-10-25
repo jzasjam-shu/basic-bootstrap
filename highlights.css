@@ -212,4 +212,6 @@ a.list-group-item {
     min-height: 100% !important;
     font-size: 12px;
     text-align: left;
+    border: 1px solid #495057;
+    border-radius: 0.5em;
 }

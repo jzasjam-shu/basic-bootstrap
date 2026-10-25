@@ -899,7 +899,8 @@ insertHtmlItems.forEach(item => {
             break;
         case 'page-layout': // Navbar + header and layout grid with sidebar and main content with nested grid + footer
             htmlCode = `
-<!-- Page Layout -->
+<!-- Example Page Layout -->
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-dark-subtle">
     <div class="container-fluid">
@@ -922,14 +923,17 @@ insertHtmlItems.forEach(item => {
         </div>
     </div>
 </nav>
+
 <!-- Header -->
 <header class="p-3 text-center">
     <h1>Welcome to My App</h1>
     <p class="lead">This is a simple page layout example.</p>
 </header>
+
 <!-- Main Content -->
 <main class="container-fluid">
     <div class="row">
+
         <!-- Sidebar -->
         <aside class="col-md-3 p-3">
             <h4>Sidebar</h4>
@@ -939,6 +943,7 @@ insertHtmlItems.forEach(item => {
                 <li class="list-group-item">Item 3</li>
             </ul>
         </aside>
+
         <!-- Main Section -->
         <section class="col-md-9 p-3">
             <h2>Main Content</h2>
@@ -963,8 +968,10 @@ insertHtmlItems.forEach(item => {
                 </div>
             </div>
         </section>
+
     </div>
 </main>
+
 <!-- Footer -->
 <footer class="mt-auto text-center p-3 bg-body-tertiary text-muted small">Created by {Your Name Here} 2026</footer>
 `;
@@ -1032,14 +1039,14 @@ insertAtCursor('\n\t');
 
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-sm-6">\n');
+            insertAtCursor('\t\t\t<div class="col-sm-6">');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
             
             // Column>
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-sm-6">\n');
+            insertAtCursor('\t\t\t<div class="col-sm-6">');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
@@ -1050,21 +1057,21 @@ insertAtCursor('\n\t');
         insertAtCursor('\t\t<div class="row g-3 mb-3">\n');
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-md-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
 
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-md-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
             
             // Column
             insertAtCursor('\n\n\t\t\t<!-- Column -->\n');
-            insertAtCursor('\t\t\t<div class="col-md-4">\n');
+            insertAtCursor('\t\t\t<div class="col-md-4">');
             insertAtCursor('\t\t\t\t');
             insertRandomHtmlCode();
             insertAtCursor('\n\t\t\t</div>\n');
