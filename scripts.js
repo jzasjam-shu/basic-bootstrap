@@ -66,6 +66,7 @@ function insertHtmlCode(htmlItem) {
         insertHtmlItem.click();
     }
     document.getElementById('htmlInput').value=html_beautify(document.getElementById('htmlInput').value)
+    console.log(`Inserted HTML: ${htmlItem}`);
 }
 //function to insert HTML code into textarea at cursor position
 function insertAtCursor(htmlCode) {
@@ -81,6 +82,44 @@ function insertAtCursor(htmlCode) {
     updateOutput(); // Update the output div with the new HTML code
     document.getElementById('htmlInput').value=html_beautify(document.getElementById('htmlInput').value)
 }
+function insertRandomHtmlNavbarCode() {
+    const htmlItems = Array.from(
+        document.querySelectorAll('.randomNavHtml .insertHtml')
+    ).filter(item => {
+        const name = item.dataset.htmlItem;
+        return name && name !== 'main';
+    });
+
+    if (htmlItems.length === 0) return;
+
+    const randomItem = htmlItems[
+        Math.floor(Math.random() * htmlItems.length)
+    ];
+
+    insertHtmlCode(randomItem.dataset.htmlItem);
+
+    //console.log(`Inserted random HTML: ${randomItem.dataset.htmlItem}`);
+}
+
+function insertRandomHtmlCode() {
+    const htmlItems = Array.from(
+        document.querySelectorAll('.randomHtml .insertHtml')
+    ).filter(item => {
+        const name = item.dataset.htmlItem;
+        return name && name !== 'main';
+    });
+
+    if (htmlItems.length === 0) return;
+
+    const randomItem = htmlItems[
+        Math.floor(Math.random() * htmlItems.length)
+    ];
+
+    insertHtmlCode(randomItem.dataset.htmlItem);
+
+    //console.log(`Inserted random HTML: ${randomItem.dataset.htmlItem}`);
+}
+
 
 function clearTextarea() {
     const textarea = document.getElementById('htmlInput');
@@ -112,8 +151,15 @@ let accordion_item = 0;
 const insertHtmlItems = document.querySelectorAll('.insertHtml');
 insertHtmlItems.forEach(item => {
     item.addEventListener('click', () => {
-        const htmlItem = item.getAttribute('data-html-item');
+        
         let htmlCode = '';
+        const htmlData = item.getAttribute('data-html-code');
+        if(htmlData){
+            htmlCode = htmlData;
+        }
+
+        
+        const htmlItem = item.getAttribute('data-html-item');
         switch (htmlItem) {
             case 'main':
                 htmlCode = `
@@ -180,14 +226,15 @@ insertHtmlItems.forEach(item => {
                 break;
             case 'navbar-fixed':
                 htmlCode = `
-<!-- Navbar Component (Fixed Position) -->
-<nav class="navbar navbar-light fixed-top bg-body-secondary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-    </div>
-</nav>
 <!-- Fixed Navbar Spacer -->
-<div class="mb-5"></div>
+<div class="mb-5">
+    <!-- Navbar Component (Fixed Position) -->
+    <nav class="navbar navbar-light fixed-top bg-body-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+        </div>
+    </nav>
+</div>
 `;
                 break;
             case 'navbar-dark':
@@ -258,47 +305,48 @@ insertHtmlItems.forEach(item => {
                 break;
             case 'navbar-menu-fixed':
                 htmlCode = `
-<!-- Navbar with Menu Component (Fixed Position) -->
-<nav class="navbar navbar-expand-lg fixed-top bg-body-secondary">
-    <div class="container-fluid">
-
-        <!-- Branding -->
-        <a class="navbar-brand" href="#">Navbar</a>
-       
-        <!-- Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navigation Menu -->
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-</nav>
 <!-- Fixed Navbar Spacer -->
-<div class="mb-5"></div>
+<div class="mb-5">
+    <!-- Navbar with Menu Component (Fixed Position) -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-secondary">
+        <div class="container-fluid">
+
+            <!-- Branding -->
+            <a class="navbar-brand" href="#">Navbar</a>
+        
+            <!-- Menu Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</div>
 `;
                 break;
             case 'navbar-full':
@@ -796,10 +844,26 @@ insertHtmlItems.forEach(item => {
 </form>
 `;
                 break;
+            case 'blockquote-attribution':
+                htmlCode = `
+<!-- Blockquote with Attribution -->
+<figure>
+    <blockquote class="blockquote">
+        <p>A well-known quote, contained in a blockquote element.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+        Someone famous in <cite title="Source Title">Source Title</cite>
+    </figcaption>
+</figure>                
+`;
+            break;
+        case 'image-thumbnail':
+            htmlCode = `
+<!-- Image Thumbnail -->
+<img src="https://placeholdit.com/300x200" class="img-thumbnail" alt="...">
+`;
+            break;
 
-
-            default:
-                htmlCode = '';
         }
         const htmlInput = document.getElementById('htmlInput');
         const start = htmlInput.selectionStart;
@@ -844,44 +908,6 @@ document.getElementById('htmlInput').addEventListener('keydown', function (e) {
     }
 });
 
-function insertRandomHtmlNavbarCode() {
-    const htmlItems = Array.from(
-        document.querySelectorAll('.randomNavHtml .insertHtml')
-    ).filter(item => {
-        const name = item.dataset.htmlItem;
-        return name && name !== 'main';
-    });
-
-    if (htmlItems.length === 0) return;
-
-    const randomItem = htmlItems[
-        Math.floor(Math.random() * htmlItems.length)
-    ];
-
-    insertHtmlCode(randomItem.dataset.htmlItem);
-
-    console.log(`Inserted random HTML: ${randomItem.dataset.htmlItem}`);
-}
-
-function insertRandomHtmlCode() {
-    const htmlItems = Array.from(
-        document.querySelectorAll('.randomHtml .insertHtml')
-    ).filter(item => {
-        const name = item.dataset.htmlItem;
-        return name && name !== 'main';
-    });
-
-    if (htmlItems.length === 0) return;
-
-    const randomItem = htmlItems[
-        Math.floor(Math.random() * htmlItems.length)
-    ];
-
-    insertHtmlCode(randomItem.dataset.htmlItem);
-
-    console.log(`Inserted random HTML: ${randomItem.dataset.htmlItem}`);
-}
-
 
 
 // Set up Basic Page
@@ -889,7 +915,8 @@ clearTextarea(); // Clear the textarea on page load
 // insertHtmlCode('navbar-menu'); // Insert the HTML code for the navbar-menu into the textarea on page load
 insertRandomHtmlNavbarCode();
 insertAtCursor('\n\n<!-- Main Content -->\n<main class="p-2 text-center">\n\n'); // Insert the HTML code for the main element into the textarea on page load
-    insertAtCursor('\n\t');
+    
+insertAtCursor('\n\t');
     insertHtmlCode('header'); // Insert the HTML code for the header into the textarea on page load
     // insertHtmlCode('grid-3'); // Insert the HTML code for the grid-4 into the textarea on page load
     // Row
