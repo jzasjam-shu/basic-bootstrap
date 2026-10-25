@@ -192,7 +192,18 @@ a.list-group-item {
 
 
 
-div#subAccordionExample .accordion-button {
-    font-size: 0.5em;
+#subAccordionExample .accordion-button {
+    font-size: 0.45em;
     font-weight: 500;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+}
+
+#subAccordionExample .list-group {
+    max-height: 150px;
+    overflow-y: auto;
+}   
+
+#subAccordionExample .list-group a {
+    border-left-width: 5px;
 }

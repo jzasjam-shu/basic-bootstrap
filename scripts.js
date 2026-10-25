@@ -214,6 +214,15 @@ insertHtmlItems.forEach(item => {
                 htmlCode = `
 <a href="#" class="btn btn-primary w-100">Primary</a>`;
                 break;
+            case 'button-group':
+                htmlCode = `
+<!-- Button Group -->
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary">Left</button>
+    <button type="button" class="btn btn-primary">Middle</button>
+    <button type="button" class="btn btn-primary">Right</button>
+</div>`;
+                break;
             case 'navbar':
                 htmlCode = `
 <!-- Navbar Component -->
@@ -861,6 +870,78 @@ insertHtmlItems.forEach(item => {
             htmlCode = `
 <!-- Image Thumbnail -->
 <img src="https://placeholdit.com/300x200" class="img-thumbnail" alt="...">
+`;
+            break;
+        case 'page-layout': // Navbar + header and layout grid with sidebar and main content with nested grid + footer
+            htmlCode = `
+<!-- Page Layout -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark-subtle">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">My App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Header -->
+<header class="p-3 text-center">
+    <h1>Welcome to My App</h1>
+    <p class="lead">This is a simple page layout example.</p>
+</header>
+<!-- Main Content -->
+<main class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <aside class="col-md-3 p-3">
+            <h4>Sidebar</h4>
+            <ul class="list-group">
+                <li class="list-group-item">Item 1</li>
+                <li class="list-group-item">Item 2</li>
+                <li class="list-group-item">Item 3</li>
+            </ul>
+        </aside>
+        <!-- Main Section -->
+        <section class="col-md-9 p-3">
+            <h2>Main Content</h2>
+            <p>This is the main content area. You can add your content here.</p>
+            <!-- Nested Grid -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nested Card 1</h5>
+                            <p class="card-text">This is a nested card inside the main content area.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Nested Card 2</h5>
+                            <p class="card-text">This is another nested card inside the main content area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- Footer -->
+<footer class="mt-auto text-center p-3 bg-body-tertiary text-muted small">Created by {Your Name Here} 2026</footer>
 `;
             break;
 
