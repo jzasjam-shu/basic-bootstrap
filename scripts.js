@@ -289,7 +289,7 @@ insertHtmlItems.forEach(item => {
 <!-- Navbar with Logo Component -->
 <nav class="navbar bg-body-secondary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand mx-auto" href="#">
             <img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
             Bootstrap
         </a>

@@ -192,19 +192,19 @@ a.list-group-item {
 
 
 
-#subAccordionExample .accordion-button {
+.sub-accordion .accordion-button {
     font-size: 0.45em;
     font-weight: 500;
     padding-top: 0.7em;
     padding-bottom: 0.7em;
 }
 
-#subAccordionExample .list-group {
+.sub-accordion .list-group {
     max-height: 150px;
     overflow-y: auto;
 }   
 
-#subAccordionExample .list-group a {
+.sub-accordion .list-group a {
     border-left-width: 5px;
 }
 
@@ -214,4 +214,9 @@ a.list-group-item {
     text-align: left;
     border: 1px solid #495057;
     border-radius: 0.5em;
+    resize: vertical;
+}
+
+.CodeMirror pre:hover {
+    box-shadow: none;
 }

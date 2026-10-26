@@ -38,37 +38,7 @@
 				<div class="col-md-4 col-lg-3 ">
 					<!-- <h3>Menu</h3> -->
 					<div class="accordion text-start" id="accordionExample">
-						<div class="accordion-item">
-							<h2 class="accordion-header">
-								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
-									data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-									Navigation Bars
-								</button>
-							</h2>
-							<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-								<div class="list-group list-group-flush small randomNavHtml">
-									<a class="list-group-item list-group-item-action insertHtml" data-html-item="navbar" title="Click to Insert a Basic Navbar">+
-										Basic Navbar</a>
-									<a class="list-group-item list-group-item-action insertHtml" data-html-item="navbar-fixed" title="Click to Insert a Basic Navbar (Fixed Position)">+
-										Basic Navbar (Fixed Position)</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="navbar-dark" title="Click to Insert a Basic Navbar (Dark)">+ Basic Navbar (Dark)</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="navbar-icon" title="Click to Insert a Navbar with Icon">+ Navbar with Icon</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="navbar-menu" title="Click to Insert a Navbar with Menu">+ Navbar with Menu</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="navbar-menu-fixed" title="Click to Insert a Navbar with Menu (Fixed Position)">+ Navbar with Menu (Fixed Position)</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="navbar-full" title="Click to Insert a Full Navbar">+ Full Navbar</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="http://getbootstrap.com/docs/5.3/components/navbar/" target="_blank"><img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Navbar Docs </a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank"><img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Navs and Tabs Docs </a>
-
-								</div>
-							</div>
-						</div>
+						
 						<div class="accordion-item">
 							<h2 class="accordion-header">
 								<button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
@@ -77,6 +47,42 @@
 								</button>
 							</h2>
 							<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+								
+								<div class="accordion accordion-flush text-start sub-accordion" id="NavAccordionExample">
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+												data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												+ Navigation Bars
+											</button>
+										</h2>
+										<div id="collapseTwo" class="accordion-collapse collapse" >
+											<div class="accordion-body small p-0">
+												<div class="list-group list-group-flush small randomNavHtml">
+													<a class="list-group-item list-group-item-action insertHtml"
+														href="http://getbootstrap.com/docs/5.3/components/navbar/" target="_blank"><img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Navbar Docs </a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														href="https://getbootstrap.com/docs/5.3/components/navs-tabs/" target="_blank"><img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Navs and Tabs Docs </a>
+													<a class="list-group-item list-group-item-action insertHtml" data-html-item="navbar" title="Click to Insert a Basic Navbar">+
+														Basic Navbar</a>
+													<a class="list-group-item list-group-item-action insertHtml" data-html-item="navbar-fixed" title="Click to Insert a Basic Navbar (Fixed Position)">+
+														Basic Navbar (Fixed Position)</a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														data-html-item="navbar-dark" title="Click to Insert a Basic Navbar (Dark)">+ Basic Navbar (Dark)</a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														data-html-item="navbar-icon" title="Click to Insert a Navbar with Icon">+ Navbar with Icon</a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														data-html-item="navbar-menu" title="Click to Insert a Navbar with Menu">+ Navbar with Menu</a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														data-html-item="navbar-menu-fixed" title="Click to Insert a Navbar with Menu (Fixed Position)">+ Navbar with Menu (Fixed Position)</a>
+													<a class="list-group-item list-group-item-action insertHtml"
+														data-html-item="navbar-full" title="Click to Insert a Full Navbar">+ Full Navbar</a>
+
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 								<div class="list-group list-group-flush small">
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="main" title="Click to Insert <main>">+
 										Main</a>
@@ -92,8 +98,8 @@
 										Grid (3 Column)</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="grid-4" title="Click to Insert Grid (4 Column)">+
 										Grid (4 Column)</a>
-									<a class="list-group-item list-group-item-action insertHtml" data-html-item="page-layout" title="Click to Insert FullPage Layout">+ Page Layout</a>
-									<a class="list-group-item list-group-item-action insertHtml" href="https://getbootstrap.com/docs/5.3/layout/grid/"
+									<a class="list-group-item list-group-item-action insertHtml" data-html-item="page-layout" title="Click to Insert Full Page Layout">+ Page Layout</a>
+									<a class="list-group-item list-group-item-action small insertHtml" href="https://getbootstrap.com/docs/5.3/layout/grid/"
 										target="_blank">
 										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" height="16"
 											class="d-inline-block"> Bootstrap Grid Docs </a>
@@ -109,6 +115,9 @@
 							</h2>
 							<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="list-group list-group-flush small randomHtml">
+									<a class="list-group-item list-group-item-action small"
+										href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank">
+										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Cards Docs </a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="card">+
 										Basic Card</a>
 									<a class="list-group-item list-group-item-action insertHtml"
@@ -122,10 +131,7 @@
 									<a class="list-group-item list-group-item-action insertHtml"
 										data-html-item="card-list" title="Click to Insert a Card with List">+ Card with List</a>
 									<a class="list-group-item list-group-item-action insertHtml"
-										data-html-item="card-full" title="Click to Insert a Full Card">+ Full Card</a> 
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank">
-										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Cards Docs </a>
+										data-html-item="card-full" title="Click to Insert a Full Card">+ Full Card</a>
 								</div>
 							</div>
 						</div>
@@ -138,6 +144,15 @@
 							</h2>
 							<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="list-group list-group-flush small randomHtml">
+									<a class="list-group-item list-group-item-action small "
+										href="https://getbootstrap.com/docs/5.3/components/list-group/" target="_blank">
+										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap List Group Docs </a>
+									<a class="list-group-item list-group-item-action small"
+										href="https://getbootstrap.com/docs/5.3/components/alerts/" target="_blank">
+										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Alerts Docs </a>
+									<a class="list-group-item list-group-item-action small"
+										href="https://getbootstrap.com/docs/5.3/components/accordion/" target="_blank">
+										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Accordion Docs </a>
 									<a class="list-group-item list-group-item-action insertHtml"
 										data-html-item="list-group" title="Click to Insert a List Group">+ List Group</a>
 									<a class="list-group-item list-group-item-action insertHtml"
@@ -160,15 +175,6 @@
 										Image Thumbnail</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="text" title="Click to Insert Text">+
 										Text</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/list-group/" target="_blank">
-										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap List Group Docs </a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/alerts/" target="_blank">
-										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Alerts Docs </a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/accordion/" target="_blank">
-										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Accordion Docs </a>
 								</div>
 							</div>
 						</div>
@@ -181,11 +187,11 @@
 							</h2>
 							<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="list-group list-group-flush small randomHtml">
-									<a class="list-group-item list-group-item-action insertHtml" data-html-item="form" title="Click to Insert a Basic Form">+ Basic Form</a>
-									<a class="list-group-item list-group-item-action insertHtml" data-html-item="form-full" title="Click to Insert a Full Form">+ Full Form</a>
-									<a class="list-group-item list-group-item-action insertHtml"
+									<a class="list-group-item list-group-item-action small"
 										href="https://getbootstrap.com/docs/5.3/forms/overview/" target="_blank">
 										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Forms Docs </a>
+									<a class="list-group-item list-group-item-action insertHtml" data-html-item="form" title="Click to Insert a Basic Form">+ Basic Form</a>
+									<a class="list-group-item list-group-item-action insertHtml" data-html-item="form-full" title="Click to Insert a Full Form">+ Full Form</a>
 								</div>
 							</div>
 						</div>
@@ -198,6 +204,9 @@
 							</h2>
 							<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
 								<div class="list-group list-group-flush small">
+									<a class="list-group-item list-group-item-action small"
+										href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">
+										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Button Docs </a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button" title="Click to Insert a Button">+ Button</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button-outline" title="Click to Insert a Button Outline">+ Button Outline</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button-large" title="Click to Insert a Button (Large)">+ Button (Large)</a>
@@ -205,9 +214,6 @@
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button-danger" title="Click to Insert a Button (Danger)">+ Button (Danger)</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button-full" title="Click to Insert a Button Full Width">+ Button Full Width</a>
 									<a class="list-group-item list-group-item-action insertHtml" data-html-item="button-group" title="Click to Insert a Button Group">+ Button Group</a>
-									<a class="list-group-item list-group-item-action insertHtml"
-										href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">
-										<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Button Docs </a>
 								</div>
 							</div>
 						</div>
@@ -222,7 +228,7 @@
 								
 								
 								<!-- Accordion component -->
-								<div class="accordion accordion-flush" id="subAccordionExample">
+								<div class="accordion accordion-flush sub-accordion" id="subAccordionExample">
 
 									<!-- Accordion Item -->
 									<div class="accordion-item">
@@ -236,6 +242,9 @@
 										<div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#subAccordionExample">
 											<div class="accordion-body p-0">
 												<div class="list-group list-group-flush small">
+													<a class="list-group-item list-group-item-action small"
+														href="https://getbootstrap.com/docs/5.3/utilities/colors/" target="_blank">
+														<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Colors Docs </a>
 													<a class="list-group-item list-group-item-action insertHtml"
 														data-html-code="text-center" title="Click to Add Class .text-center">+ .text-center</a>
 													<a class="list-group-item list-group-item-action insertHtml"
@@ -284,9 +293,6 @@
 														data-html-code="text-black" title="Click to Add Class .text-black">+ .text-black</a>
 													<a class="list-group-item list-group-item-action insertHtml text-white"
 														data-html-code="text-white" title="Click to Add Class .text-white">+ .text-white</a>
-													<a class="list-group-item list-group-item-action insertHtml"
-														href="https://getbootstrap.com/docs/5.3/utilities/colors/" target="_blank">
-														<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Colors Docs </a>
 												</div>
 											</div>
 										</div>
@@ -304,6 +310,9 @@
 										<div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#subAccordionExample">
 											<div class="accordion-body p-0">
 												<div class="list-group list-group-flush small">
+													<a class="list-group-item list-group-item-action small"
+														href="https://getbootstrap.com/docs/5.3/utilities/background/" target="_blank">
+														<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Backgrounds Docs </a>
 													<a class="list-group-item list-group-item-action insertHtml bg-primary"
 														data-html-code="bg-primary" title="Click to Add Class .bg-primary">+ .bg-primary</a>
 													<a class="list-group-item list-group-item-action insertHtml text-bg-primary"
@@ -313,7 +322,7 @@
 													<a class="list-group-item list-group-item-action insertHtml bg-secondary"
 														data-html-code="bg-secondary" title="Click to Add Class .bg-secondary">+ .bg-secondary</a>
 													<a class="list-group-item list-group-item-action insertHtml bg-secondary-subtle"
-														data-html-code="bg-secondar-subtley" title="Click to Add Class .bg-secondary-subtle">+ .bg-secondary-subtle</a>
+														data-html-code="bg-secondary-subtle" title="Click to Add Class .bg-secondary-subtle">+ .bg-secondary-subtle</a>
 													<a class="list-group-item list-group-item-action insertHtml bg-success"
 														data-html-code="bg-success" title="Click to Add Class .bg-success">+ .bg-success</a>
 													<a class="list-group-item list-group-item-action insertHtml bg-success-subtle"
@@ -348,9 +357,6 @@
 														data-html-code="bg-black" title="Click to Add Class .bg-black">+ .bg-black</a>
 													<a class="list-group-item list-group-item-action insertHtml bg-white"
 														data-html-code="bg-white" title="Click to Add Class .bg-white">+ .bg-white</a>
-													<a class="list-group-item list-group-item-action insertHtml"
-														href="https://getbootstrap.com/docs/5.3/utilities/background/" target="_blank">
-														<img src="https://getbootstrap.com//docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo"  height="16" class="d-inline-block"> Bootstrap Backgrounds Docs </a>
 												</div>
 											</div>
 										</div>
