@@ -199,7 +199,7 @@ insertHtmlItems.forEach(item => {
             case 'header':
                 htmlCode = `
 <!-- Header -->
-<header class="py-4 text-center">
+<header class="p-2 py-4 text-center">
     <h1 class="display-4">Header Title</h1>
     <p class="lead">This is a simple header description - <a href="https://getbootstrap.com/docs/5.3/content/typography/" target="_blank">See Bootstrap Typography Docs.</a></p>
 </header>
