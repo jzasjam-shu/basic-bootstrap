@@ -199,7 +199,7 @@ insertHtmlItems.forEach(item => {
             case 'header':
                 htmlCode = `
 <!-- Header -->
-<header class="p-2 text-center">
+<header class="py-4 text-center">
     <h1 class="display-4">Header Title</h1>
     <p class="lead">This is a simple header description - <a href="https://getbootstrap.com/docs/5.3/content/typography/" target="_blank">See Bootstrap Typography Docs.</a></p>
 </header>
@@ -1025,15 +1025,18 @@ insertHtmlItems.forEach(item => {
 clearTextarea(); // Clear the textarea on page load
 // insertHtmlCode('navbar-menu'); // Insert the HTML code for the navbar-menu into the textarea on page load
 insertRandomHtmlNavbarCode();
+
+
+insertAtCursor('\n');
+insertHtmlCode('header'); // Insert the HTML code for the header into the textarea on page load
+
 insertAtCursor('\n\n<!-- Main Content -->\n<main class="p-2 text-center">\n\n'); // Insert the HTML code for the main element into the textarea on page load
     
-insertAtCursor('\n\t');
-    insertHtmlCode('header'); // Insert the HTML code for the header into the textarea on page load
     // insertHtmlCode('grid-3'); // Insert the HTML code for the grid-4 into the textarea on page load
-    // Row
+    
     insertAtCursor('\n\n\t<!-- Grid Container -->\n');
-    insertAtCursor('\t<div class="container-fluid">\n');
-        
+    insertAtCursor('\t<div class="container">\n');
+        // Row
         insertAtCursor('\n\n\t\t<!-- Row -->\n');
         insertAtCursor('\t\t<div class="row g-3 mb-3">\n');
 
@@ -1052,7 +1055,14 @@ insertAtCursor('\n\t');
             insertAtCursor('\n\t\t\t</div>\n');
 
         insertAtCursor('\n\n\t\t</div>\n');
+    
+    insertAtCursor('\n\t</div>\n');
 
+    insertAtCursor('\n\t<hr class="my-4">\n');
+        
+    insertAtCursor('\n\t<!-- Grid Container -->\n');
+    insertAtCursor('\t<div class="container-fluid">\n');
+        // Row
         insertAtCursor('\n\n\t\t<!-- Row -->\n');
         insertAtCursor('\t\t<div class="row g-3 mb-3">\n');
             // Column
